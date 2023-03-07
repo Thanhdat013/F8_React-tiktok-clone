@@ -16,6 +16,7 @@
   width: var(--default-layout-header-width, 1150px);
   height: 100%;
   display: flex;
+  padding: 0 var(--default-layout-header-horizontal-spacer);
   align-items: center;
   justify-content: center;
   justify-content: space-between;
@@ -109,4 +110,5 @@
   margin-left: 28px;
   background-color: transparent;
   padding: 4px 8px;
+  cursor: pointer;
 }
