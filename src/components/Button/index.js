@@ -17,6 +17,7 @@ function Button({
   disabled = false,
   className,
   leftIcon,
+  rightIcon,
   onClick,
   ...passProps
 }) {
@@ -59,6 +60,7 @@ function Button({
   return (
     <Comp className={classes} {...props}>
       {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+      {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
       <span className={cx('title')}>{children}</span>
     </Comp>
   );
