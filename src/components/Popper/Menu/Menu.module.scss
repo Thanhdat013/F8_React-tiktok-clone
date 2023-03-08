@@ -18,7 +18,7 @@
 .menu-item {
   width: 100%;
   font-weight: 600;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
   line-height: 1.8rem;
 
   &:hover {
@@ -26,7 +26,7 @@
   }
 
   &.separate {
-    border-top: solid 1px rgba(22, 24, 35, 0.03);
+    border-top: solid 1px rgba(22, 24, 35, 0.12);
   }
 }
 
