@@ -6,9 +6,11 @@ import AccountItem from '~/components/AccountItem';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { SearchIcon } from '~/components/Icons';
+import * as searchService from '~/apiServices/searchService';
 
 import styles from './Search.module.scss';
 import classNames from 'classnames/bind';
+import { useDebounce } from '~/hooks';
 
 const cx = classNames.bind(styles);
 
@@ -17,6 +19,8 @@ function Search() {
   const [searchResult, setSearchResult] = useState([]);
   const [showResult, setShowResult] = useState(true);
   const [loading, setLoading] = useState(false);
+
+  const debounced = useDebounce(searchValue, 500);
 
   const inputRef = useRef();
 
@@ -31,24 +35,22 @@ function Search() {
   };
 
   useEffect(() => {
-    if (!searchValue.trim()) {
+    if (!debounced.trim()) {
       setSearchResult([]);
       // Không có giá trị tìm kiếm và chỉ có dấu space
       return;
     }
+    // encodeURIComponent dùng để mã hóa dữ liệu để khi người dùng nhập các ký tự của Query parameter thì sẽ không gây ảnh hưởng khi truyền trên URL
 
-    setLoading(true);
+    const fetchApi = async () => {
+      setLoading(true);
+      const result = await searchService.search(debounced);
+      setSearchResult(result);
 
-    fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(searchValue)}&type=less`) // encodeURIComponent dùng để mã hóa dữ liệu để khi người dùng nhập các ký tự của Query parameter thì sẽ không gây ảnh hưởng khi truyền trên URL
-      .then((res) => res.json())
-      .then((res) => {
-        setSearchResult(res.data);
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
-      });
-  }, [searchValue]);
+      setLoading(false);
+    };
+    fetchApi();
+  }, [debounced]);
   return (
     <>
       <HeadlessTippy
