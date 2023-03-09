@@ -18,7 +18,7 @@
 .menu-item {
   width: 100%;
   font-weight: 600;
-  font-family: 'ProximaNova', sans-serif;
+  font-family: var(--font-family);
   line-height: 1.8rem;
 
   &:hover {

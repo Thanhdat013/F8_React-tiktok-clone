@@ -30,8 +30,22 @@ function Search() {
     inputRef.current.focus();
   };
 
+  const handleChange = (e) => {
+    const searchValue = e.target.value;
+    if (searchValue.startsWith(' ')) {
+      // check không cho ký tự đầu tiên nhập vào là space
+      return;
+    } else {
+      setSearchValue(searchValue);
+    }
+  };
+
   const handleHideResult = () => {
     setShowResult(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
 
   useEffect(() => {
@@ -74,13 +88,7 @@ function Search() {
             value={searchValue}
             placeholder="Search accounts and videos"
             spellCheck={false}
-            onChange={(e) => {
-              if (e.target.value.startsWith(' ')) {
-                return;
-              } else {
-                setSearchValue(e.target.value);
-              }
-            }}
+            onChange={handleChange}
             onFocus={() => setShowResult(true)}
           />
           {!!searchValue && !loading && (
@@ -89,7 +97,7 @@ function Search() {
             </button>
           )}
           {!!loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-          <button className={cx('search-btn')}>
+          <button className={cx('search-btn')} onMouseDown={handleSubmit}>
             <SearchIcon />
           </button>
         </div>

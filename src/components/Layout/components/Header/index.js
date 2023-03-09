@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import classNames from 'classnames/bind';
 
@@ -11,6 +11,8 @@ import Menu from '~/components/Popper/Menu';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
+import routesConfig from '~/config/routes';
+
 import {
   UploadIcon,
   MessageIcon,
@@ -107,7 +109,10 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <img src={images.logo} alt="Logo Tiktok" />
+        <Link to={routesConfig.home} className={cx('logo-link')}>
+          {' '}
+          <img src={images.logo} alt="Logo Tiktok" />
+        </Link>
 
         <Search />
 

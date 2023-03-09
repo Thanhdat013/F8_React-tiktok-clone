@@ -11,7 +11,7 @@ import { useState } from 'react';
 const cx = classNames.bind(styles);
 
 const defaultFnc = () => {};
-function Menu({ children, items = [], onChange = defaultFnc }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFnc }) {
   const [history, setHistory] = useState([{ data: items }]);
   const current = history[history.length - 1]; // lấy phần tử cuối mảng bằng cách tính ra index cuối
 
@@ -39,6 +39,7 @@ function Menu({ children, items = [], onChange = defaultFnc }) {
     <Tippy
       delay={[0, 700]}
       offset={[12, 8]}
+      hideOnClick={hideOnClick}
       interactive
       placement="bottom-end"
       render={(attrs) => (
