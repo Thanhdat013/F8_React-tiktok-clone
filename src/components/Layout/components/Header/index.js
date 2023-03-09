@@ -48,6 +48,141 @@ const MENU_ITEMS = [
           code: 'vi',
           title: 'Tiếng Việt',
         },
+        {
+          type: 'language',
+          code: '',
+          title: 'العربية',
+        },
+        {
+          type: 'language',
+          code: '',
+          title: 'বাঙ্গালি (ভারত)',
+        },
+        {
+          type: 'language',
+          code: 'Pilipinas',
+          title: 'Cebuano (Pilipinas)',
+        },
+        {
+          type: 'language',
+          code: 'Česká republika',
+          title: 'Čeština (Česká)',
+        },
+        {
+          type: 'language',
+          code: 'Deutsch',
+          title: 'Deutsch',
+        },
+        {
+          type: 'language',
+          code: 'Ελλάδα',
+          title: 'Ελληνικά (Ελλάδα)',
+        },
+        {
+          type: 'language',
+          code: 'Español',
+          title: 'Español',
+        },
+        {
+          type: 'language',
+          code: 'Suomi',
+          title: 'Suomi (Suomi)',
+        },
+        {
+          type: 'language',
+          code: 'Pilipinas',
+          title: 'Filipino (Pilipinas)',
+        },
+        {
+          type: 'language',
+          code: 'Français',
+          title: 'Français',
+        },
+        {
+          type: 'language',
+          code: 'ישראל',
+          title: 'עברית (ישראל)',
+        },
+        {
+          type: 'language',
+          code: 'हिंदी',
+          title: 'हिंदी',
+        },
+        {
+          type: 'language',
+          code: 'Italia',
+          title: 'Italiano (Italia)',
+        },
+        {
+          type: 'language',
+          code: '日本語',
+          title: '日本語',
+        },
+        {
+          type: 'language',
+          code: 'កម្ពុជា',
+          title: 'ខ្មែរ (កម្ពុជា)',
+        },
+        {
+          type: 'language',
+          code: '대한민국',
+          title: '한국어 (대한민국)',
+        },
+        {
+          type: 'language',
+          code: 'Malaysian',
+          title: ' Melayu (Malaysia)',
+        },
+        {
+          type: 'language',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'language',
+          code: 'မြန်မာ',
+          title: 'မြန်မာ (မြန်မာ)',
+        },
+        {
+          type: 'language',
+          code: 'Nederland',
+          title: 'Nederlands (Nederland)',
+        },
+        {
+          type: 'language',
+          code: 'Polska',
+          title: 'Polski (Polska)',
+        },
+        {
+          type: 'language',
+          code: 'Brasil',
+          title: 'Português (Brasil)',
+        },
+        {
+          type: 'language',
+          code: 'Romania',
+          title: 'Română (Romania)',
+        },
+        {
+          type: 'language',
+          code: 'Россия',
+          title: 'Русский (Россия)',
+        },
+        {
+          type: 'language',
+          code: 'Türkiye',
+          title: 'Türkçe (Türkiye)',
+        },
+        {
+          type: 'language',
+          code: 'Україна',
+          title: 'Українська (Україна)',
+        },
+        {
+          type: 'language',
+          code: '繁體中文',
+          title: '繁體中文',
+        },
       ],
     },
   },

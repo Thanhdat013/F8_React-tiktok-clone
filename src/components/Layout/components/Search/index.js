@@ -66,9 +66,10 @@ function Search() {
     fetchApi();
   }, [debounced]);
   return (
-    <>
+    <div>
       <HeadlessTippy
         interactive={true}
+        appendTo={() => document.body}
         visible={showResult && searchResult.length > 0}
         onClickOutside={handleHideResult}
         render={(attrs) => (
@@ -102,7 +103,7 @@ function Search() {
           </button>
         </div>
       </HeadlessTippy>
-    </>
+    </div>
   );
 }
 
