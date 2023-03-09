@@ -6,7 +6,7 @@ import AccountItem from '~/components/AccountItem';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { SearchIcon } from '~/components/Icons';
-import * as searchService from '~/apiServices/searchService';
+import * as searchService from '~/services/searchService';
 
 import styles from './Search.module.scss';
 import classNames from 'classnames/bind';
