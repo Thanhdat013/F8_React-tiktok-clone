@@ -36,7 +36,7 @@ const MENU_ITEMS = [
     icon: <CurrentLanguage />,
     title: 'English',
     children: {
-      title: 'Languages',
+      title: 'Languages ',
       data: [
         {
           type: 'language',
@@ -282,7 +282,6 @@ function Header() {
                 src="https://cdn.alongwalker.co/info/wp-content/uploads/2022/11/16190620/image-99-hinh-avatar-cute-ngau-ca-tinh-de-thuong-nhat-cho-nam-nu-178699bcb1cf6d58f3f17d3a1ee26472.jpg"
                 className={cx('user-avatar')}
                 alt="use-avatar"
-                fallback
               />
             ) : (
               <button className={cx('more-btn')}>
